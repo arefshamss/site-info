@@ -39,16 +39,26 @@
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const angleX = (y - centerY) / 30;
-    const angleY = (centerX - x) / 30;
+    // const angleX = (y - centerY) / 30;
+    // const angleY = (centerX - x) / 30;
+    // card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
 
-    card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
-});
+        const maxRotate = 5; // ✅ درجه لوکس
+
+        const angleX = ((y - centerY) / rect.height) * maxRotate;
+        const angleY = ((centerX - x) / rect.width) * maxRotate;
+
+        card.style.transform =
+            `perspective(1200px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+    });
 
     // Reset card transform when mouse leaves
     document.querySelector('.glass-card').addEventListener('mouseleave', function () {
-    this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-});
+    // this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+        this.style.transform =
+            'perspective(1200px) rotateX(0deg) rotateY(0deg)';
+
+    });
 
     // Add click ripple effect to social links
     document.querySelectorAll('.social-link').forEach(link => {
