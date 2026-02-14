@@ -114,11 +114,11 @@ body {
 /* Glass Card */
 .glass-card {
   /*background: rgba(255, 255, 255, 0.1);*/
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 30px;
   /*border: 1px solid rgba(255, 255, 255, 0.2);*/
   /*box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);*/
@@ -145,16 +145,16 @@ body {
   background: linear-gradient(
     45deg,
     transparent,
-    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.03),
     transparent
   );
   transform: rotate(45deg);
-  transition: all 0.5s;
+  transition: all 0.7s;
   opacity: 0;
 }
 
 .glass-card:hover::before {
-  animation: shine 0.5s ease-in-out;
+  animation: shine 0.7s ease-in-out;
 }
 
 @keyframes shine {
